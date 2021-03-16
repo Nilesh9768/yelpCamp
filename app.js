@@ -52,6 +52,6 @@ app.use(CampgroundRoutes);
 app.use(CommentRoutes);
 app.use(IndexRoutes);
 
-app.listen(3000,function(){
+app.listen(process.env.port || 3000,function(){
     console.log("Server has started.....");
 })
