@@ -1,0 +1,12 @@
+<%- include("../partials/header") %>
+<div class="ui container segment">
+    <h1>Add a comment to <%= Campground.name %></h1>
+    <form class="ui form" action="/campgrounds/<%= Campground._id %>/comment" method="POST">
+        <div class="field">
+          <label>Comment</label>
+          <textarea name="comment[content]" id="" cols="20" rows="5" placeholder="Put your comment here..."></textarea>
+        </div>
+        <button class="ui primary button" type="submit">Submit</button>
+    </form>
+</div>
+<%- include("../partials/footer") %>

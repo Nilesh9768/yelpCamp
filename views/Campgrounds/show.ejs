@@ -1,0 +1,53 @@
+<%- include("../partials/header") %>
+<div class="ui container">
+    <div class="ui segment" id="showCamp">
+        <h1><%= Campground.name %></h1>
+        <img src="<%= Campground.image %>"class="ui fluid image" alt="">
+        <p><%= Campground.description %></p>
+        <h4> <em>-Submitted By <%= Campground.author.username %></em></h4>
+
+        <% if(currentUser && Campground.author.id.equals(currentUser._id)){ %>
+            <div class="ui vertical animated primary basic button" style="width: 100px;" tabindex="0">
+                <div class="visible content">Edit</div>
+                <div class="hidden content">
+                    <a href="/campgrounds/<%= Campground._id %>/edit"><i class="edit icon"></i></a>
+                </div>
+            </div>
+            <form class="delete" action="/campgrounds/<%= Campground._id %>?_method=DELETE" method="POST">
+                <button type="submit" class="ui negative basic button vertical animated">
+                    <div class="hidden content"><i class="trash icon"></i></div>
+                    <div class="visible content">Delete</div>
+                </button>
+            </form> 
+        <%}%>
+
+    </div>
+
+    <!--================================COMMENT SECTION========================================-->
+    <div class="ui segment" id="showComment">
+        <div class="text-right">
+            <a class="ui primary button" href="/campgrounds/<%= Campground._id %>/comment/new">
+                Add New Comment
+            </a>
+        </div>
+        <hr class="ui raised"> 
+        <% Campground.comments.forEach(function(comment){ %>
+            <div id="singleComment">
+               <strong> <span><%= comment.author.username %></span> </strong>
+               <span id="timeLine">2 days ago</span>
+                <p><%= comment.content %></p> 
+                <% if(currentUser && currentUser._id.equals(comment.author.id)){ %>
+                    <a href="/campgrounds/<%= Campground._id %>/comment/<%=comment._id%>/edit" class="ui button primary tiny">Edit</a> 
+                
+                    <form class="delete" action="/campgrounds/<%= Campground._id %>/comment/<%=comment._id%>?_method=DELETE" method="POST">
+                        <button type="submit" class="ui button negative tiny">Delete</button>
+                    </form>
+                <% } %>  
+            </div>     
+        <% })%>
+    </div>
+    
+</div>
+
+
+<%- include("../partials/footer") %>

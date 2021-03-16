@@ -1,0 +1,23 @@
+<%- include("../partials/header") %>
+
+<div class="ui container segment raised formDiv"> 
+    <form class="ui form" action="/campgrounds" method="POST">
+        <h1 class="ui header">Create a new Campground!</h1> 
+        <div class="field">
+            <div><label>Title</label></div>
+            <input type="text" class="input" name="name" placeholder="Name" >
+        </div>
+        <div class="field">
+            <div><label>Image</label></div>
+            <input type="text" class="input" name="image" placeholder="Image URL" >
+        </div>
+        <div class="field">
+            <div><label>Content</label></div>
+            <textarea name="description"  class="input" cols="30" rows="10" placeholder="Decription goes here..."></textarea>
+        </div>
+        <div><button class="ui fluid blue button ">Post</button></div>
+    </form>
+
+</div>
+
+<%- include("../partials/footer") %>
