@@ -15,7 +15,9 @@ var CampgroundRoutes = require("./Routes/Campground"),
 
 var localStrategy = require("passport-local"),
     passport    = require("passport");
-mongoose.connect("mongodb://localhost:27017/yelp_camp_practice", {
+
+var DBURL=process.env.DB_URL ||"mongodb://localhost:27017/yelp_camp_practice";
+mongoose.connect(DBURL, {
     useNewUrlParser: true,
      useUnifiedTopology: true,
      useFindAndModify:false
