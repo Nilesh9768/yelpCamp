@@ -27,7 +27,7 @@ app.use(express.static("Public"));
 app.use(bodyParser.urlencoded({extended:true}));
 
 // PASSPORT CONFIGURE
-app.use(require('express-session')({
+app.use(require('cookie-session')({
     secret:" ",
     resave:false,
     saveUninitialized:false
