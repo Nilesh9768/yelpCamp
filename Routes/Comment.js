@@ -24,7 +24,8 @@ router.post("/campgrounds/:id/comment",middleware.IsLoggedIn,function(req,res){
     };
     var newComment ={
         author:author,
-        content:req.body.comment["content"]
+        content:req.body.comment["content"],
+        createTime:new Date()
     };
     Camp.findById(req.params.id,function(err,foundCampground){
         if(err){

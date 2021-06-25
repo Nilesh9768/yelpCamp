@@ -34,7 +34,7 @@
         <% Campground.comments.forEach(function(comment){ %>
             <div id="singleComment">
                <strong> <span><%= comment.author.username %></span> </strong>
-               <span id="timeLine">2 days ago</span>
+                <span id="timeLine">1 month ago</span>
                 <p><%= comment.content %></p> 
                 <% if(currentUser && currentUser._id.equals(comment.author.id)){ %>
                     <a href="/campgrounds/<%= Campground._id %>/comment/<%=comment._id%>/edit" class="ui button primary tiny">Edit</a> 
