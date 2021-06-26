@@ -1,6 +1,17 @@
 a{
     color: white;
 }
+
+.jumbotron{
+    width: 93%;
+    margin-left: 18px;
+    margin-right: 12px;
+}
+.index-container{
+    width: 80vw;
+    margin: 50px auto;
+    /* border: black 2px solid; */
+}
 .input{
     width: 40%;
     margin-top: 25px;
@@ -22,18 +33,38 @@ a{
 .img-thumbnail{
     overflow: hidden;
     text-align: center;
-    max-height: 350px;
+    margin: 8px 10px 8px 0;
+    padding: 10px 10px 20px;
+    height: 400px;
+    width: 300px;
+    box-sizing: border-box;
 }
+
+.row{
+    display: flex;
+    margin: 15px 20px;
+    
+}
+
+.img-thumbnail img{
+    width: 100%;
+    height: 70%;
+}
+
 img{
     height: 70%;
 }
+
 #showCamp{
-    margin-top: 30px;
+    margin: 30px auto 0;
+    width: 800px;
 }
 #showComment{
-    margin-top: 20px;
-    margin-bottom: 80px;
+    /* margin-top: 20px;
+    margin-bottom: 40px; */
+    width: 800px;
     background-color:rgba(104, 103, 103,0.1);
+    margin: 20px auto 40px;
 }
 #singleComment{
     margin-top: 20px;
@@ -43,4 +74,9 @@ img{
 }
 .delete{
     display: inline;
+}
+
+.main-show-container{
+    border: #fff 1px solid;
+    width: fit-content;
 }
