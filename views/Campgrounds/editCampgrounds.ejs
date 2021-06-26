@@ -1,6 +1,6 @@
 <%- include("../partials/header") %>
 
-<div class="ui container segment raised formDiv"> 
+<div class="ui container segment raised formDiv" id="edit-campground"> 
     <form class="ui form" action="/campgrounds/<%= Campground._id%>?_method=PUT" method="POST">
         <h1 class="ui header">Edit</h1> 
         <div class="field">

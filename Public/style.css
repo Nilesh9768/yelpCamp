@@ -10,7 +10,6 @@ a{
 .index-container{
     width: 80vw;
     margin: 50px auto;
-    /* border: black 2px solid; */
 }
 .input{
     width: 40%;
@@ -19,7 +18,7 @@ a{
 }
 #registerForm{
     margin-top: 100px;
-    width: 400px;
+    width: 30%;
     height: 300px;
 }
 .formDiv{
@@ -36,7 +35,7 @@ a{
     margin: 8px 10px 8px 0;
     padding: 10px 10px 20px;
     height: 400px;
-    width: 300px;
+    width: 31.5%;
     box-sizing: border-box;
 }
 
@@ -60,8 +59,6 @@ img{
     width: 800px;
 }
 #showComment{
-    /* margin-top: 20px;
-    margin-bottom: 40px; */
     width: 800px;
     background-color:rgba(104, 103, 103,0.1);
     margin: 20px auto 40px;
@@ -79,4 +76,25 @@ img{
 .main-show-container{
     border: #fff 1px solid;
     width: fit-content;
+}
+
+#comment-form{
+    width: 400px;
+}
+
+#new-campground,#edit-campground{
+    width: 550px;
+}
+
+@media  only screen and (max-width:500px) {
+    
+    .img-thumbnail{
+        width: 100%;
+    }
+    #showComment,#showCamp{
+        width: 95%;
+    }
+    .jumbotron{
+        width: 88%;
+    }
 }
